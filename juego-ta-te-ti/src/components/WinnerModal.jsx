@@ -1,27 +1,26 @@
 import React from 'react'
 import Square from './Square'
 
+const WinnerModal = ({ winner, resetGame }) => {
+  if (winner === null) return
 
-const WinnerModal = ({winner, resetGame}) => {
-    if(winner === null) return
+  const winnerText = winner === false ? 'Empate' : 'Ganó'
 
-    const winnerText = winner === false ? 'Empate' : 'Ganó'
+  return (
+    <section className='winner'>
+      <div className='text'>
+        <h2>{winnerText}</h2>
 
-    return (  
-            <section className='winner'>
-                <div className='text'>
-                    <h2>{ winnerText }</h2>
+        <header className='win'>
+          {winner && <Square>{winner}</Square>}
+        </header>
 
-                    <header className='win'>
-                        {winner && <Square>{winner}</Square>}
-                    </header>
-
-                    <footer>
-                        <button onClick={resetGame}>Empezar de Nuevo</button>
-                    </footer>
-                </div>
-            </section>
-    )
+        <footer>
+          <button onClick={resetGame}>Empezar de Nuevo</button>
+        </footer>
+      </div>
+    </section>
+  )
 }
 
 export default WinnerModal
