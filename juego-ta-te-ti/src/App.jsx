@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import confetti from 'canvas-confetti';
 
-import Square from './components/Square';
-
 import { TURNS } from './utils/constants';
 import { checkWinnerFrom } from './utils/checkWinner';
 import { checkEndGame } from './utils/checkEndGame';
@@ -23,7 +21,6 @@ function App() {
 
   //para saber cuando hay un ganador
   const [winner, setWinner] = useState(null)  //null=hay ganador, falso= empate
-
 
 
   //cambia turno cada vez que se selecciona uno
