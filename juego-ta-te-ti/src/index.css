@@ -54,7 +54,7 @@ body {
 }
 
 .board button:hover {
-  background: #eee;
+  background: rgb(200, 255, 0);
   color: #222;
 }
 
@@ -70,7 +70,7 @@ body {
   margin: 15px auto;
   width: fit-content;
   position: relative;
-  border-radius: 10px;
+  border-radius: 10px; 
 }
 
 .turn .square,
@@ -83,7 +83,8 @@ body {
 
 .square.is-selected {
   color: #fff;
-  background: #09f;
+  background: rgb(200, 255, 0);
+
 }
 
 .winner {
@@ -114,6 +115,7 @@ body {
   margin: 0 auto;
   width: fit-content;
   border: 2px solid #eee;
+  background: rgb(200, 255, 0);
   border-radius: 10px;
   display: flex;
   gap: 15px;
