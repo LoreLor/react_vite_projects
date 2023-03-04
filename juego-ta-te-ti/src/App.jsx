@@ -8,16 +8,26 @@ import WinnerModal from './components/WinnerModal';
 
 import './App.css'
 import Board from './components/Board';
-import TURNSComponent from './components/TURNS';
+import TurnsComponent from './components/TurnsComponent';
+import { resetGameStorage, saveGameToStorage } from './utils/storage';
 
 
 
 function App() {
+
   //tablero de 9 posiciones y fill() metodo para rellenar
-  const [board, setBoard] = useState(Array(9).fill(null))
+  const [board, setBoard] = useState(() => {
+    const boardFromStorage = window.localStorage.getItem('board');
+    return boardFromStorage? JSON.parse(boardFromStorage) : Array(9).fill(null)
+  })
+
 
   //para saber de quien es el turno
-  const [turn, setTurn] = useState(TURNS.X)
+  const [turn, setTurn] = useState(() => {
+    const turnFromStorage = window.localStorage.getItem('turn');
+    return turnFromStorage? JSON.parse(turnFromStorage) : TURNS.X 
+  })
+
 
   //para saber cuando hay un ganador
   const [winner, setWinner] = useState(null)  //null=hay ganador, falso= empate
@@ -38,6 +48,12 @@ function App() {
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn)
 
+    //persisto estado del tablero
+    saveGameToStorage({
+      board: newBoard,
+      turn: newTurn
+    })
+    
     //chequeo si existe un ganador
     const newWinner = checkWinnerFrom(newBoard)
     if (newWinner) {
@@ -53,6 +69,8 @@ function App() {
     setBoard(Array(9).fill(null))
     setTurn(TURNS.X)
     setWinner(null)
+
+    resetGameStorage()
   }
 
 
@@ -64,7 +82,7 @@ function App() {
         board={board} 
         updateBoard={updateBoard} 
       />
-      <TURNSComponent 
+      <TurnsComponent 
         turn={turn}      
       />
 
