@@ -4,12 +4,11 @@ const MouseFollower = () => {
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
+  // pointer move
   useEffect(() => {
     const handleMove = (event) => {
-      console.log('effect', { enabled })
       const { clientX, clientY } = event
       setPosition({ x: clientX, y: clientY })
-      console.log('handleMove', clientX, clientY)
     }
     if (enabled) {
       window.addEventListener('pointermove', handleMove)
@@ -22,6 +21,7 @@ const MouseFollower = () => {
     }
   }, [enabled])
 
+  // change body className
   useEffect(() => {
     document.body.classList.toggle('no-cursor', enabled)
 
