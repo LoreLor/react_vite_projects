@@ -1,0 +1,34 @@
+main {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: auto;
+    max-width: 800px;
+    font-family: system-ui, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main h1 {
+    color:blueviolet;
+    font-size: 3rem;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+section img {
+    max-width: 300px;
+    height:auto;
+    border-radius:15px
+}
+
+section p {
+    color: rgb(122, 6, 122);
+    font-weight: 500;
+    font-size: large;
+    line-height: 1.8rem;
+}
+
