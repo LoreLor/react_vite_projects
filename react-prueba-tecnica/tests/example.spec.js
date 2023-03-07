@@ -2,7 +2,6 @@
 import { test, expect } from '@playwright/test'
 
 const URL_CAT_FIRSTWORD = 'https://cataas.com'
-
 const LOCALHOST_URL = 'http://localhost:5173/'
 
 test('app shows random fact and image', async ({ page }) => {
