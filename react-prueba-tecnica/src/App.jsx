@@ -1,7 +1,7 @@
 
 import React from 'react'
 import './App.css'
-import { Otro } from './components/Otro'
+// import { Otro } from './components/Otro'
 import { useCatFact } from './hooks/useCatFact'
 import { useCatImage } from './hooks/useCatImage'
 // import { getRandomCat } from './services/getRandomCat'
@@ -33,7 +33,7 @@ const App = () => {
   const { fact, refreshRandmFact } = useCatFact()
   const { imageUrl } = useCatImage({ fact })
 
-  const handleClick = () => {
+  const handleClick = async () => {
     refreshRandmFact()
   }
 
@@ -41,9 +41,7 @@ const App = () => {
     <main>
       <h1>App de Gatitos</h1>
       <section>
-        {fact &&
-          <p>{fact}
-          </p>}
+        {fact && <p>{fact}</p>}
         {imageUrl && <img src={imageUrl} alt={`cat_image_${fact}`} />}
       </section>
       <br />
@@ -51,9 +49,7 @@ const App = () => {
       <br />
 
       {/* como reutilizar el custom hook */}
-      <Otro />
-      <Otro />
-      <Otro />
+      {/* <Otro /> */}
     </main>
   )
 }
