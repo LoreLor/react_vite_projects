@@ -9,10 +9,7 @@
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
-      minmax(
-        200px,
-        1fr
-      )
+      minmax(200px, 1fr)
     );
     gap: 1rem;
   }
@@ -33,7 +30,7 @@
   }
   
   .products span {
-    font-size: 1rem;
+    font-size: 0.8rem;
     opacity: .9;
   }
   

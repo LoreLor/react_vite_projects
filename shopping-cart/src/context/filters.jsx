@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react'
 
 // paso 1: crear el contexto --> este se consume
-export const FiltersContext = createContext()
+export const FiltersContext = createContext() // --> Singleton pq se crea solo una vez
 
 // paso 2: Proveer el contexto
 export function FiltersProvider ({ children }) {
