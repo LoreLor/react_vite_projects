@@ -196,16 +196,16 @@ const Footer = () => {
           </div>
 
           <div className='footer-social-icons flex flex-center'>
-            <a href='https://facebook.com' className='bg-red flex flex-center'>
+            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' className='bg-red flex flex-center'>
               <FontAwesomeIcon icon={faSquareFacebook} />
             </a>
-            <a href='https://twitter.com' className='bg-red flex flex-center'>
+            <a href='https://twitter.com' target='_blank' rel='noopener noreferrer' className='bg-red flex flex-center'>
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href='https://instagram.com' className='bg-red flex flex-center'>
+            <a href='https://instagram.com' target='_blank' rel='noopener noreferrer' className='bg-red flex flex-center'>
               <FontAwesomeIcon icon={faSquareInstagram} />
             </a>
-            <a href='https://linkedin.com' className='bg-red flex flex-center'>
+            <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' className='bg-red flex flex-center'>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>
