@@ -75,9 +75,18 @@
     transform: scale(1.2);
 }
 
+@media screen and (min-width: 280px){
+    .navbar-collapse{
+        width: 200px;
+    }  
+    .navbar-nav{
+        font-size: 16px;
+    }
+}
+
 @media screen and (min-width: 480px){
     .navbar-collapse{
-        width: 320px;
+        width: 300px;
     }  
 }
 
