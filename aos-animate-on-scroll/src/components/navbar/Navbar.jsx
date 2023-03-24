@@ -49,19 +49,19 @@ const Navbar = () => {
               <a href='#header' className='nav-link'>home</a>
             </li>
             <li className='nav-item'>
-              <a href='#header' className='nav-link'>what we do</a>
+              <a href='#what-we-do' className='nav-link'>what we do</a>
             </li>
             <li className='nav-item'>
-              <a href='#header' className='nav-link'>features</a>
+              <a href='#features' className='nav-link'>features</a>
             </li>
             <li className='nav-item'>
-              <a href='#header' className='nav-link'>projects</a>
+              <a href='#projects' className='nav-link'>projects</a>
             </li>
             <li className='nav-item'>
-              <a href='#header' className='nav-link'>team</a>
+              <a href='#team' className='nav-link'>team</a>
             </li>
             <li className='nav-item'>
-              <a href='#header' className='nav-link'>support</a>
+              <a href='#support' className='nav-link'>support</a>
             </li>
           </ul>
         </div>
