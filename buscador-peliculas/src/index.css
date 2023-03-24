@@ -120,7 +120,6 @@ body {
   background: #fff;
   background: var(--background-body);
   text-rendering: optimizeLegibility;
-  
 }
 
 @media (prefers-color-scheme: dark) {

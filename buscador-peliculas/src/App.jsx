@@ -47,6 +47,7 @@ function App () {
             onChange={handleChange}
             style={{ border: '1px solid transparent', borderColor: error ? 'red' : 'green' }}
           />
+          <label>Sort</label><br />
           <input type='checkbox' onChange={handleSort} checked={sort} />
           <button type='submit'>Buscar</button>
         </form>
