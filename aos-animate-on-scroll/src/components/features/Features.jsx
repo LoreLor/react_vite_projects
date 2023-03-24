@@ -17,7 +17,7 @@ const Features = () => {
                 features?.map((feature) => {
                   const { id, icon, title, text } = feature
                   return (
-                    <div className='features-item text-center' key={id}>
+                    <div className='features-item text-center' key={id} data-aos='zoom-out' data-aos-duration='3000'>
                       <div className='feature-item-icon'>
                         <div className='mx-auto'>{icon}</div><br />
                       </div>

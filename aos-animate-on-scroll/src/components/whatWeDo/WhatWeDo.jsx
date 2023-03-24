@@ -19,10 +19,10 @@ const WhatWeDo = () => {
               const { id, image, title, text } = service
               return (
                 <div className='what-we-do-item grid text-center' key={id}>
-                  <div className='what-we-do-item-left'>
+                  <div className='what-we-do-item-left' data-aos='zoom-in-right' data-aos-duration='3000'>
                     <img src={image} alt='' className='mx-auto' />
                   </div>
-                  <div className='what-we-do-item-right'>
+                  <div className='what-we-do-item-right' data-aos='zoom-in-left' data-aos-duration='3000'>
                     <h4 className='text-upper fs-20'>{title}</h4>
                     <p className='text mx-auto'>{text}</p>
                     <a href='#' className='btn btn-red'>view more</a>

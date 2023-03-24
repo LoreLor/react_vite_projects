@@ -24,7 +24,7 @@
     color:var(--white-color);
 }
 
-@media screen and (min-width: 578px){
+@media screen and (min-width: 767px){
     .features-item{
         display: flex;
         text-align: left;

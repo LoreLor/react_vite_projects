@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const close = () => {
     setClick(false)
-    console.log('soy open', click)
+    // console.log('soy open', click)
   }
 
   return (
@@ -23,7 +23,7 @@ const Navbar = () => {
 
         <div className='brand-and-toggler flex'>
           <a href='index.html' alt='' className='navbar-brand text-upper fw-7 fs-22 flex'>
-            <span className='text-white'>info</span>
+            <span className='text-white'>business</span>
             <span>tech</span>
           </a>
           <button
@@ -58,7 +58,7 @@ const Navbar = () => {
               <a href='#header' className='nav-link'>projects</a>
             </li>
             <li className='nav-item'>
-              <a href='#header' className='nav-link'>teams</a>
+              <a href='#header' className='nav-link'>team</a>
             </li>
             <li className='nav-item'>
               <a href='#header' className='nav-link'>support</a>

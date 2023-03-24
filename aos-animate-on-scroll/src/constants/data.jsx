@@ -31,7 +31,7 @@ export const services = [
     id: 4,
     image: images.professionalsImg,
     icon: <FontAwesomeIcon icon={faEdit} style={{ fill: gradient }} />,
-    title: 'Content Creation',
+    title: 'Mobile Design',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. Commodo odio aenean sed adipiscing diam donec adipiscing tristique. Mi eget mauris pharetra et. Non tellus orci ac auctor augue. Elit at imperdiet dui accumsan sit. Ornare arcu dui vivamus arcu felis. Egestas integer eget aliquet nibh praesent. In hac habitasse platea dictumst quisque sagittis purus. Pulvinar elementum integer enim neque volutpat ac.'
   },
   {
@@ -114,19 +114,19 @@ export const features = [
 export const portfolio = [
   {
     id: 16,
-    title: 'Lorem',
+    title: 'Ecommerce',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elits',
     image: images.portfolio1
   },
   {
     id: 17,
-    title: 'Ipsum',
+    title: 'Targeting',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elits',
     image: images.portfolio2
   },
   {
     id: 18,
-    title: 'Consectur',
+    title: 'Insurance',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elits',
     image: images.portfolio3
   }
@@ -153,26 +153,28 @@ export const testimonials = [
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
     image: images.customer3,
     rating: 2
-  },
+  }]
+
+export const team = [
   {
     id: 22,
     name: 'Jason Stawer',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+    text: 'Management',
     image: images.customer4,
     rating: 4
   },
   {
     id: 23,
     name: 'Lisa Green',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
+    text: 'Developer',
     image: images.customer5,
     rating: 2
   },
   {
     id: 24,
     name: 'Anna Doe',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing.',
-    image: images.customer_img_6,
+    text: 'UI & UX Designer',
+    image: images.customer6,
     rating: 4
   }
 ]
