@@ -33,7 +33,7 @@ const Footer = () => {
               </h3>
               <ul className='footer-item-links'>
                 <li>
-                  <a href='#'>
+                  <a href='#Web-Design'>
                     <AnimatedLetters
                       letterClass={letterClass}
                       strArray={['W', 'e', 'b', '-', 'D', 'e', 's', 'i', 'g', 'n']}
@@ -42,7 +42,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href='#'>
+                  <a href='#Branding'>
                     <AnimatedLetters
                       letterClass={letterClass}
                       strArray={['B', 'r', 'a', 'n', 'd', 'i', 'n', 'g']}
@@ -51,7 +51,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href='#'>
+                  <a href='#Mobile-Design'>
                     <AnimatedLetters
                       letterClass={letterClass}
                       strArray={['M', 'o', 'b', 'i', 'l', 'e', '-', 'D', 'e', 's', 'i', 'g', 'n']}
@@ -60,7 +60,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href='#'>
+                  <a href='#Graphic-Design'>
                     <AnimatedLetters
                       letterClass={letterClass}
                       strArray={['G', 'r', 'a', 'p', 'h', 'i', 'c', '-', 'D', 'e', 's', 'i', 'g', 'n']}
@@ -69,7 +69,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href='#'>
+                  <a href='#Media-Buying'>
                     <AnimatedLetters
                       letterClass={letterClass}
                       strArray={['M', 'e', 'd', 'i', 'a', '-', 'B', 'u', 'y', 'i', 'n', 'g']}

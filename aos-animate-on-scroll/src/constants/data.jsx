@@ -76,13 +76,13 @@ export const features = [
   {
     id: 10,
     icon: <FontAwesomeIcon icon={faGroupArrowsRotate} style={{ fill: gradient, fontSize: '36px' }} />,
-    title: 'Digital Marketing',
+    title: 'Web-Design',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et elit vitae lectus convallis scelerisque. Cras vestibulum blandit lorem, at fringilla nisl sollicitudin ac. Nunc venenatis nec neque sed semper.'
   },
   {
     id: 11,
     icon: <FontAwesomeIcon icon={faCircleDollarToSlot} style={{ fill: gradient, fontSize: '36px' }} />,
-    title: 'Trade Shows',
+    title: 'Mobile-Design',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et elit vitae lectus convallis scelerisque. Cras vestibulum blandit lorem, at fringilla nisl sollicitudin ac. Nunc venenatis nec neque sed semper.'
   },
   {
@@ -100,13 +100,13 @@ export const features = [
   {
     id: 14,
     icon: <FontAwesomeIcon icon={faWandMagicSparkles} style={{ fill: gradient, fontSize: '36px' }} />,
-    title: 'Graphic Design',
+    title: 'Graphic-Design',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et elit vitae lectus convallis scelerisque. Cras vestibulum blandit lorem, at fringilla nisl sollicitudin ac. Nunc venenatis nec neque sed semper.'
   },
   {
     id: 15,
     icon: <FontAwesomeIcon icon={faShoppingCart} style={{ fill: gradient, fontSize: '36px' }} />,
-    title: 'Media Buying',
+    title: 'Media-Buying',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et elit vitae lectus convallis scelerisque. Cras vestibulum blandit lorem, at fringilla nisl sollicitudin ac. Nunc venenatis nec neque sed semper.'
   }
 ]
