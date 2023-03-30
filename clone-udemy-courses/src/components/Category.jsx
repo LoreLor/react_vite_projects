@@ -25,9 +25,7 @@ const CategoryWrapper = styled.div`
       font-size: 15px;
     }
   }
-  &:hover {
-    border: 2px solid var(--clr-violet);
-  }
+  
 `
 
 const Category = ({ image, category }) => {
