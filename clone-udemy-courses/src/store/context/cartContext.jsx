@@ -22,19 +22,14 @@ const CartContext = React.createContext()
 export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState)
 
-  const addToCart = (id, category, image, name, creator, discounted) => {
+  const addToCart = (id, image, name, creator, discounted, category) => {
     dispatch({
       type: ADD_TO_CART,
       payload: {
-        id,
-        category,
-        image,
-        name,
-        creator,
-        discounted
+        id, image, name, creator, discounted, category
       }
     })
-    console.log('course', { id, name, category, image })
+    console.log('course', { id, image, name, creator, discounted, category })
   }
 
   useEffect(() => {

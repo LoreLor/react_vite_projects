@@ -172,22 +172,8 @@ const SingleCoursePage = () => {
   }, [])
 
   // destructuring
-  const {
-    category,
-    image,
-    name,
-    description,
-    rating,
-    star,
-    students,
-    creator,
-    date,
-    lang,
-    price,
-    discounted,
-    learnItems,
-    content
-  } = singleCourse
+  const { category, image, course_name: name, description, rating_count: rating, rating_star: star, students, creator, updated_date: date, lang, actual_price: price, discounted_price: discounted, what_you_will_learn: learnItems, content } =
+  singleCourse
 
   return (
     <SingleCourseWrapper>
@@ -254,7 +240,7 @@ const SingleCoursePage = () => {
               <Link
                 to='/cart'
                 className='add-to-cart-btn d-inline-block fw-7 bg-violet'
-                onClick={() => addToCart(id, name, category, creator, image, discounted)}
+                onClick={() => addToCart(id, image, name, creator, discounted, category)}
               >
                 Add to <FaShoppingCart />
               </Link>

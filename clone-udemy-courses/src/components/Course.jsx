@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { useCartContext } from '../store/context/cartContext'
 import StarRating from './StarRating'
 
 const CourseCard = styled.div`
@@ -73,7 +74,8 @@ flex-direction: column;
 `
 
 const Course = (courses) => {
-  const { id, image, name, creator, discounted, price, rating, star } = courses
+  const { id, category, image, course_name: name, rating_count: rating, rating_star: star, actual_price: price, discounted_price: discounted, creator } = courses
+  const { addToCart } = useCartContext()
 
   return (
     <CourseCard>
@@ -102,7 +104,7 @@ const Course = (courses) => {
         <Link to={`/courses/${id}`} className='item-btn see-details-btn  fw-7 fs-15'>
           See Details
         </Link>
-        <Link to='' className='item-btn add-to-cart-btn  fw-7 fs-15'>
+        <Link to='/cart' onClick={() => addToCart(id, image, name, creator, discounted, category)} className='item-btn add-to-cart-btn  fw-7 fs-15'>
           Add to Cart
         </Link>
       </div>
