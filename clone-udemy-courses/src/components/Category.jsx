@@ -40,7 +40,6 @@ const Category = ({ image, category }) => {
         <div className='category-item-name'>
           <h6>{category}</h6>
         </div>
-        Category
       </CategoryWrapper>
     </Link>
   )
