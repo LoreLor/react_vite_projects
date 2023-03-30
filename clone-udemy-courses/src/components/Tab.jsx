@@ -7,15 +7,16 @@ const TabWrapped = styled.div`
   .tab{
     margin-top: 16px;
     .tab-head-item button{
-      border: 1px solid rgba(0, 0, 0, 0.7);
+      border: 1px solid var(--clr-violet);
       padding: 0.5rem 0.8rem;
       margin-right: 0.6rem;
-      margin-bottom: .6rem;
       transition: var(--transition);
 
       &:hover{
         background-color: var(--clr-black);
+        border: 1px solid var(--clr-black);
         color: var(--clr-white);
+        transform: scale(0.85);
       }
     }
 
@@ -23,7 +24,7 @@ const TabWrapped = styled.div`
       margin-top: 32px;
     }
 
-    @media screen and (min-width: 600px){
+    @media screen and (min-width: 756px){
       .tab-body{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -33,7 +34,7 @@ const TabWrapped = styled.div`
 
     @media screen and (min-width: 992px){
       .tab-body {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 

@@ -4,7 +4,7 @@ import { useCoursesContext } from '../store/context/coursesContext'
 import Tab from './Tab'
 
 const CourseListWrapper = styled.div`
-  padding: 40px 0;
+  padding: 20px 0;
   .courses-list-top p{
     font-size: 1.8rem;
     

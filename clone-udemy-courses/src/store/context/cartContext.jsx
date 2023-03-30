@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useReducer } from 'react'
-import { ADD_TO_CART, GET_CART_TOTAL } from '../actions'
+import { ADD_TO_CART, CLEAR_CART, GET_CART_TOTAL, REMOVE_ITEM_CART } from '../actions'
 import cartReducer from '../reducers/cartReducer'
 
 const loadCartFromStorage = () => {
@@ -32,6 +32,19 @@ export const CartProvider = ({ children }) => {
     console.log('course', { id, image, name, creator, discounted, category })
   }
 
+  const removeItemCart = (id) => {
+    dispatch({
+      type: REMOVE_ITEM_CART,
+      payload: id
+    })
+  }
+
+  const clearCart = () => {
+    dispatch({
+      type: CLEAR_CART
+    })
+  }
+
   useEffect(() => {
     dispatch({
       type: GET_CART_TOTAL
@@ -42,7 +55,9 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider value={{
       ...state,
-      addToCart
+      addToCart,
+      removeItemCart,
+      clearCart
     }}
     >
       {children}

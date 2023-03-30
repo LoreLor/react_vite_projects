@@ -56,6 +56,7 @@ flex-direction: column;
       &:hover {
         background-color: var(--clr-black);
         color: var(--clr-white);
+        transform: scale(0.85);
       }
     }
 
@@ -67,6 +68,7 @@ flex-direction: column;
       &:hover {
         background-color: var(--clr-black);
         color: var(--clr-white);
+        transform: scale(0.85);
       }
     }
   }

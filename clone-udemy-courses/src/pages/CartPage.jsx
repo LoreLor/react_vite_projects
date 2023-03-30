@@ -5,6 +5,58 @@ import { BsTrash } from 'react-icons/bs'
 import CartItem from '../components/CartItem'
 
 const CartWrapper = styled.div`
+padding: 20px;
+  .card-pg-title {
+    padding: 20px 0 6px 0;
+  }
+
+  .cart-grid {
+    row-gap: 40px;
+    .cart-grid-left {
+      margin-bottom: 30px;
+    }
+
+    .cart-clear-btn {
+      span {
+        margin-right: 8px;
+      }
+    }
+
+
+    .cart-items-list {
+      margin-top: 20px;
+      row-gap: 12px;
+    }
+
+    .cart-total-value {
+      font-size: 34px;
+    }
+
+    .text-total {
+      margin-right: 8px;
+    }
+    .checkout-btn {
+      padding: 14px 28px;
+      letter-spacing: 2px;
+      margin-top: 12px;
+      transition: var(--transition);
+
+      &:hover {
+        background-color: var(--clr-purple);
+        color: var(--clr-white);
+        transform: scale(0.85);
+      }
+  }
+
+  .cart-total {
+    padding-bottom: 50px;
+  }
+
+  @media screen and (min-width: 992px){
+    grid-template-columns: 70% 30%;
+    column-gap: 100px;
+  }
+}
 `
 
 const NotFoundWrapper = styled.div`
@@ -14,7 +66,7 @@ font-weight: 600;
 `
 
 const CartPage = () => {
-  const { cart: cartItems, totalItems, totalAmount } = useCartContext()
+  const { cart: cartItems, totalItems, totalAmount, clearCart } = useCartContext()
 
   return (
     <>
@@ -30,7 +82,7 @@ const CartPage = () => {
           : (
             <CartWrapper>
               <div className='container'>
-                <div className='cart-pg-title'>
+                <div className='card-pg-title'>
                   <h3>Shopping Cart</h3>
                 </div>
                 <div className='cart-grid grid'>
@@ -42,7 +94,7 @@ const CartPage = () => {
                           {totalItems > 1 ? `Courses in cart: ${totalItems}` : `Course in cart: ${totalItems}`}
                         </span>
                       </div>
-                      <button type='button' className='cart-clear-btn flex fs-15 fw-6 text'>
+                      <button type='button' className='cart-clear-btn flex fs-15 fw-8 text' onClick={() => clearCart()}>
                         <span className='d-inline-block text-pink'>Clear All</span>
                         <BsTrash className='text-pink' />
                       </button>
@@ -52,7 +104,10 @@ const CartPage = () => {
                       {
                         cartItems.map(item => {
                           return (
-                            <CartItem key={item.id} cartItem={item} />
+                            <CartItem
+                              key={item.id}
+                              cartItem={item}
+                            />
                           )
                         })
                       }
@@ -62,9 +117,11 @@ const CartPage = () => {
                   {/** cart grid right */}
                   <div className='cart-grid-right'>
                     <div className='cart-total'>
-                      <span className='d-block fs-18 fw-6'>Total:</span>
-                      <div className='cart-total-value fw-8'>$ {totalAmount.toFixed(2)}</div>
-                      <button type='button' className='checkout-btn bg-purple text-white fw-6'>Checkout</button>
+                      <span className='text-total fs-18 fw-6'>Total: </span>
+                      <div className='cart-total-value fw-8'>
+                        $ {totalAmount.toFixed(2)}
+                      </div>
+                      <button type='button' className='checkout-btn bg-violet text-black fw-8'>Checkout</button>
                     </div>
                   </div>
                   {/** end cart right */}
@@ -73,10 +130,8 @@ const CartPage = () => {
 
             </CartWrapper>
             )
-
       }
     </>
-
   )
 }
 

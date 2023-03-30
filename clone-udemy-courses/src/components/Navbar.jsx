@@ -18,6 +18,7 @@ const NavbarWrapper = styled.nav`
     }
   }
 
+
   .cart-btn{
     margin-right:18px;
     font-size: 2.8rem;
@@ -37,6 +38,10 @@ const NavbarWrapper = styled.nav`
       border-radius: 50%;
       align-items: center;
       justify-content: center;
+    }
+
+    &:hover{
+      transform: scale(0.90);
     }
   }
 
