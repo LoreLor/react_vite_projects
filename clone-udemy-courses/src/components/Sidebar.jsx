@@ -74,7 +74,7 @@ const Sidebar = () => {
               return (
                 <div key={index}>
                   <li className='sidebar-link-item fw-5'>
-                    <Link to='/' className='text-uppercase'>{category}</Link>
+                    <Link to={`/category/${category}`} className='text-uppercase'>{category}</Link>
                   </li>
                 </div>
               )
