@@ -135,10 +135,7 @@ const SingleCourseWrapper = styled.div`
           }
         }
 
-        @media screen and (min-width: 992px) {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
+        
     }
 
     .course-content {

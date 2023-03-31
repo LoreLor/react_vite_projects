@@ -4,6 +4,7 @@ import { reducer, initialState } from '../reducers/cartReducer'
 // me creo el contexto
 export const CartContext = createContext()
 
+// reducer
 export const useCartReducer = () => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
